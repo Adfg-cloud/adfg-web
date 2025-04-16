@@ -115,13 +115,31 @@ a {
   text-decoration: none; /* Elimina el subrayado, si quieres */
 }
 
-/* Enlaces al pasar el ratón */
-a:hover {
-  
-  text-decoration: underline; /* Añade subrayado al hacer hover, si quieres */
-}
 
 /* Enlaces ya visitados */
 a:visited {
   color: #800080; /* Cambia el color de enlaces visitados */
+}
+
+
+/* animaciones CSS*/
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ccff;
+}
+
+
+.dropdown-content a {
+  color: white;
+  text-decoration: none;
+  transition: max-height 0.5s ease;
+}
+
+.dropdown-content a:hover {
+  color: #00ccff;
 }
