@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>adfg - Contacto</title>
+  <link rel="stylesheet" href="style.css" /> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <!-- Header con barra de navegación -->
+    <header>
+      <h1>adfg</h1>
+     <!--Aqui iria el nav, pero lo hemos puesto en un script-->
+ <div id="navbar"></div>
+      </header>
+
+      <!-- de aqui para abajo el contenido de la pagina-->
+<main>
+    
+    <section>
+        <h2>IBM-Oa6</h2>
+        <p>
+            Este año en la universidad se nos ha ofrecido la oportunidad de participar en este proyecto de IBM, en el que nos estan formado con técnicas reales de empresas para que desarrollemos un proyecto innovador que solucione un problema mediante una solución con Inteligencia Artificial generativa. Para esta tarea nos han asignado dos mentores de la empresa con experiencia en desarrollo de proyectos y emprendimiento. Y nos estan enseñando tecnicas como Desing Thinking o Lean Canvas entre otras.
+        </p>
+
+    </section>
+
+    </main>
+ <!-- Footer -->
+ <footer>
+    <p>&copy; 2025 adfg</p>
+  </footer>
+
+  <!--Esto hay que ponerlo para no tener que repetir el nav en todos -->>
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
