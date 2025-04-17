@@ -85,14 +85,18 @@ nav ul li:hover .dropdown-content {
 }
 
 nav ul li .dropdown-content a {
-  padding: 6px 12px; /* Espacio reducido */
-  margin: 0;         /* Eliminamos márgenes */
+  padding: 0 12px;         /* Solo padding horizontal */
+  margin: 0;
   text-decoration: none;
   display: block;
   color: white;
   font-size: 1em;
-  line-height: 1.2;
+  line-height: 1;          /* Compacta el contenido */
+  height: 30px;            /* Altura fija para control total */
+  display: flex;
+  align-items: center;     /* Centra verticalmente el texto */
 }
+
 
 nav ul li .dropdown-content a:hover {
   background-color: #666;
