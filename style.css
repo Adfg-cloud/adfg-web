@@ -67,15 +67,17 @@ nav ul li:hover {
   background-color: #555;
 }
 
-nav ul li .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #444;
-  min-width: 160px;
-  z-index: 1;
-  flex-direction: column;
-  flex-wrap: nowrap;
+nav ul li .dropdown-content a {
+  padding: 6px 12px;     /* Reducido el espacio vertical */
+  margin: 0;              /* Eliminamos el margen entre elementos */
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-size: 1em;
+  line-height: 1.2;
+  transition: color 0.3s ease;
 }
+
 
 nav ul li:hover .dropdown-content {
   display: flex;
