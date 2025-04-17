@@ -59,7 +59,7 @@ nav ul li.dropdown {
   position: relative;
 }
 
-nav ul li a.dropbtn {
+nav ul li .dropbtn {
   cursor: pointer;
 }
 
@@ -74,29 +74,28 @@ nav ul li .dropdown-content {
   min-width: 160px;
   z-index: 1;
   flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 nav ul li:hover .dropdown-content {
   display: flex;
+  flex-direction: column;
 }
 
 nav ul li .dropdown-content a {
-  padding: 4px 10px;
-  margin: 2px 0;
+  padding: 12px 16px;
   text-decoration: none;
-  display: block;
   color: white;
   font-size: 1em;
-  line-height: 1.1;
-  transition: color 0.3s ease;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 nav ul li .dropdown-content a:hover {
   background-color: #666;
-  color: #00ccff;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -115,13 +114,12 @@ h2 {
   color: #222;
 }
 
-/* Enlaces normales */
+/* Enlaces generales */
 a {
   color: #007bff;
   text-decoration: none;
 }
 
-/* Enlaces ya visitados */
 a:visited {
   color: #800080;
 }
