@@ -89,7 +89,7 @@ nav ul li:hover .dropdown-content {
 
 /* Estilo para los enlaces dentro del dropdown */
 nav ul li .dropdown-content a {
-  padding: 18px 20px;  /* Aumento del tamaño del cuadro */
+  padding: 12px 16px;  /* Aumento del tamaño del cuadro */
   text-decoration: none;
   display: block;
   color: white;
