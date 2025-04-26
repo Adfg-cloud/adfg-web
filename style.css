@@ -153,3 +153,9 @@ a:visited {
   height: auto;
 }
 
+.contenedor-columnas {
+      column-count: 3; /* Dividir en 3 columnas */
+      column-gap: 20px; /* Espacio entre columnas */
+    }
+
+
