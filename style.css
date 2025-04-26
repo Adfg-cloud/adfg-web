@@ -133,3 +133,12 @@ a {
 a:visited {
   color: #800080;
 }
+
+/* Estilos para logos de proyectos */
+.logo-proyecto {
+  display: block;
+  margin: 20px auto; /* Centrado y separación del título */
+  max-width: 300px; /* Para que no sea demasiado grande */
+  width: 100%; /* Que se adapte bien a móviles */
+  height: auto; /* Mantener proporción original */
+}
