@@ -1,38 +1,43 @@
+/* Estilo general del cuerpo de la página */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f2f2;
-  color: #333;
+  background-color: #f2f2f2; /* Color de fondo gris claro */
+  color: #333; /* Color del texto principal */
   margin: 0;
   padding: 0;
 }
 
+/* Estilo del encabezado */
 header {
-  background: #222;
-  color: white;
+  background: #222; /* Fondo oscuro */
+  color: white; /* Texto blanco */
   text-align: center;
   padding: 20px 0;
 }
 
+/* Estilo del título principal */
 h1 {
   margin: 0;
   font-size: 2em;
 }
 
-/* barra de navegación */
+/* Barra de navegación: lista sin viñetas y horizontal */
 nav ul {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 20px; /* Separación entre elementos */
   margin: 0;
 }
 
+/* Cada elemento de la lista de navegación */
 nav ul li {
   display: inline-block;
-  position: relative;
+  position: relative; /* Necesario para el dropdown */
 }
 
+/* Enlaces dentro de la barra de navegación */
 nav ul li a {
   color: white;
   padding: 15px 20px;
@@ -41,78 +46,92 @@ nav ul li a {
   font-size: 1.1em;
 }
 
+/* Configuración general de enlaces de navegación */
 nav a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Suaviza el cambio de color */
 }
 
+/* Cuando el usuario pasa el ratón sobre un enlace de navegación */
 nav a:hover {
-  color: #00ccff;
-  text-decoration: underline;
+  color: #00ccff; /* Azul claro al pasar el ratón */
+  text-decoration: underline; /* Subraya al pasar el ratón */
 }
 
+/* Evitar que los enlaces visitados cambien de color en la barra */
+nav a:visited {
+  color: white;
+}
+
+/* Estilo del contenido principal */
 main {
   padding: 40px;
 }
 
-/* Menú desplegable */
+/* Comportamiento de los elementos que tienen menú desplegable */
 nav ul li.dropdown {
   position: relative;
 }
 
+/* Botón para abrir el menú desplegable */
 nav ul li a.dropbtn {
   cursor: pointer;
 }
 
+/* Fondo al pasar el ratón sobre cualquier item del nav */
 nav ul li:hover {
   background-color: #555;
 }
 
-/* Contenedor del dropdown */
+/* Contenedor del menú desplegable oculto inicialmente */
 nav ul li .dropdown-content {
   display: none;
   position: absolute;
   background-color: #444;
   min-width: 160px;
-  z-index: 1;
-  padding: 0;  /* Sin padding */
-  margin: 0;   /* Sin margen */
-  border: none; /* Sin bordes */
-  flex-direction: column; /* Columna */
-  gap: 0;        /* Sin espacio entre los cuadros */
+  z-index: 1; /* Que esté por encima de otros elementos */
+  padding: 0;
+  margin: 0;
+  border: none;
+  flex-direction: column;
+  gap: 0;
 }
 
+/* Mostrar el menú desplegable al pasar el ratón */
 nav ul li:hover .dropdown-content {
   display: flex;
 }
 
-/* Estilo para los enlaces dentro del dropdown */
+/* Estilo de los enlaces dentro del menú desplegable */
 nav ul li .dropdown-content a {
-  padding: 12px 16px;  /* Aumento del tamaño del cuadro */
+  padding: 12px 16px;
   text-decoration: none;
   display: block;
   color: white;
   font-size: 0.9em;
   line-height: 1.2;
   text-align: center;
-  margin: 0;           /* Sin margen entre los cuadros */
-  border: none;        /* Sin bordes entre los cuadros */
-  background-color: #444; /* Fondo para los enlaces */
+  margin: 0;
+  border: none;
+  background-color: #444;
 }
 
+/* Estilo de hover dentro del dropdown */
 nav ul li .dropdown-content a:hover {
   background-color: #666;
   color: #00ccff;
 }
 
+/* Estilo del pie de página */
 footer {
   text-align: center;
   padding: 20px;
-  background: #ddd;
+  background: #ddd; /* Fondo gris claro */
   margin-top: 40px;
 }
 
+/* Estilo general de cada sección */
 section {
   padding: 20px;
   margin: 20px;
@@ -120,29 +139,34 @@ section {
   border-radius: 8px;
 }
 
+/* Estilo para los títulos de secciones */
 h2 {
   color: #222;
 }
 
-/* Enlaces normales */
-a {
-  color: #007bff;
+/* Estilo de enlaces normales (fuera de la navbar) */
+main a {
+  color: #007bff; /* Azul estándar */
   text-decoration: none;
 }
 
-a:visited {
-  color: #800080;
+/* Evitar cambio de color tras visitar enlaces normales */
+main a:visited {
+  color: #007bff;
 }
+
 /*-----------------------------------------------------------------*/
-/* Estilos para logos de proyectos */
+/* Estilos específicos para los logos de proyectos */
 .logo-proyecto {
   display: block;
-  margin: 20px auto; /* Centrado y separación del título */
-  max-width: 300px; /* Para que no sea demasiado grande */
-  width: 100%; /* Que se adapte bien a móviles */
-  height: auto; /* Mantener proporción original */
+  margin: 20px auto; /* Centrado y separación */
+  max-width: 300px; /* Ancho máximo */
+  width: 100%; /* Que se adapte en móvil */
+  height: auto; /* Mantener proporción */
 }
+
 /*-------------------------------------------------------------------*/
+/* Estilos para el logo de IBM */
 .logo-ibm {
   text-align: center;
   margin-bottom: 20px;
@@ -153,9 +177,9 @@ a:visited {
   height: auto;
 }
 
+/* Estilo para dividir texto en varias columnas */
 .contenedor-columnas {
-      column-count: 3; /* Dividir en 3 columnas */
-      column-gap: 20px; /* Espacio entre columnas */
-    }
-
+  column-count: 3;
+  column-gap: 20px;
+}
 
