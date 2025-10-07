@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elektra</title>
+  <link rel="stylesheet" href="style.css" /> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <!-- Header con barra de navegación -->
+    <header>
+      <h1>adfg</h1>
+     <!--Aqui iria el nav, pero lo hemos puesto en un script-->
+ <div id="navbar"></div>
+      </header>
+
+      <!-- de aqui para abajo el contenido de la pagina-->
+<main>
+<section id ="Feme">
+  <h2>¿Qué es Elektra?</h2>
+  <p> Si bien el proyecto FEME fue bastante entretenido y aprendi mucho llevandolo a cabo, no es el único proyecto que he desarrollado. Elektra toma el siguiente lugar.
+
+Se trata de un plug-in para FEME, pero por ahora el proyecto se encuentra en un estado temprano del desarrollo. Elektra lleva un paso más allá el uso de la electricidad, entrando en el campo de las altas tensiones.
+</p>
+
+</section>
+
+
+<section id = "Feme">
+  <h2>¿Porqué nacio Elektra?</h2>
+  <p> FEME solo fue el primer de muchos experimentos que voy a realizar, a medidad que aprenda más cosas y descubra más elementos. En este caso vamos a trabajar con un convertidor de alta tension de forma que vamos a conseguir que 
+las baterias que compramos para FEME de 3.7V pueden llegar a dar hasta 37.000V ¿Para qué? Pues ni más ni menos para tener una fuente de alta tensión que sirva para alimentar o bien equipos externos o juguetes, sí, juguetes. 
+Cualquier juguete con una bateria puede comportarse de formas insospechadas a la tension correcta, logicamente esto puede ser peligroso y no recomiendo hacerlo, al menos sin el equipo de proteccion adecuado
+</p>
+</section>
+
+<section id="Feme"> 
+  <h2>¿Como construí a Elektra?</h2>
+  <p>Con Electra reutilice algunas de las piezas sobrantes de FEME y algunos nuevos que tuve que comprar, como un convertidor de alta tención, que no es más que unas bobinas que se inducen corriente la una a la otra</p>
+  
+  <p> 
+Despues de esto pase a ver el esquema del proyecto, que no es excesivamente complicado. Consite en una bateria, un pulsador y el convertidor, aunque tambien use un clip(ahora verás)
+</p>  
+
+  <p>
+Despues de esto lo siguiente fue comprar los componentes que no tenia, en este caso el convertidor de alta tensión (compramos uno extra para más tarde) y el pulsador.
+  </p>
+  
+  <p>
+ Estos componentes tardaron bastante tiempo en llegar, no por el boton sino por los generadores que como vereis más a delante se pueden usar para fabricar cosas peligrosas, 
+de ahí que no recomiende hacer uso de estos componentes sino se conocen bien (ahora bien haz lo que quieras, yo no me hago responsable de nada).
+</p>
+  <p>
+En este caso no tuvimos que ponernos a medir cosas para hacer una encapsulado para todo, no queda tan bonito porque queda el cableado al aire, pero es bastante más sencillo para este tipo de experimentos. 
+</p>
+ 
+  <p>
+  El procedimiento de montaje fue sencillo, pero me ayudo a ganar soltura con el equipo de soldar. Bastó con unir el polo positivo de un soporte de baterias con un extremo del generador, y unir el extremo negativo del soporte al 
+al otro extremo del convertidor, pero poniendo en medio el botón. En el extremo opuesto del convertidor acabamos poniendo unos pines para poder pinchar el generador en una placa protoboard. Acabamos haciendo los pines cortando el clip
+de forma que tuvieramos dos pequeños pines.
+</p>
+
+  <p>Estoy pensando en hacer un video explicando todo el proceso, desde la compra de los componentes, hasta el esquema electrico del circuito que por cierto es el siguiente:</p>
+<img src="imagenes/Esquema_eléctrico.png" alt="Esquema electrico" style="max-width: 100%; height: auto;">
+  
+</section>
+
+<section id="Feme">
+<h2>Una vez terminado el proyecto</h2>
+  <p> 
+  El resultado final ha sido algo distinto a lo que planeabamos al principio. En lugar de usar el montaje orriginal, para poder aumentar significativamente la capacidad, decidí usar otra carcasa y tuve que sacrificar el sistema de railes.
+  Todo esto ha dado lugar al un sistema de bateria portail de alta capacidad, sencilla de montar y cuyas piezas son facilmente reemplazables en caso de que se dañen, o quieras usarlas para otros proyectos
+  </p>
+
+  <p>
+    Lo realmente interesante de este proyecto es que se ha convertido el la primera toma de contacto real y no supervisada con el mundo de la electronica. Todo el tema de baterias, los drivers, las conexiones, las soldaduras, etc. Es un mundo que considero que no hemos explorado lo suficiente en la carrera y que 
+    dentro del mundo de la ingenieria es esencial dominar. Este proyecto solo me ha dado ganas de continuar haciendo más, aprendiendo más y montando más "juguetes" de este estilo.
+  </p>
+
+  <p>
+  Te dejo unas imagenes de como ha quedado al final el proyecto, ya que con todos los cambios que se he ido realizando con el tiempo ha cambiado mucho con respecto al principio. 
+  La caja de madera, la cantidad y la distribución de las baterias, han cambiado con respecto al inicio del proyecto
+    
+  </p>
+  
+  <div style="display: flex; justify-content: center;">
+ <img src="imagenes/FEME_carcasa.jpg" alt="Carcasa" style="max-width: 45%; margin-right: 10px;">
+  <img src="imagenes/FEME_interior.jpg" alt="Interior" style="max-width: 45%; height: auto;">
+  </div>
+  
+</section>
+  
+  </main>
+  <footer>
+    <p>&copy; 2025 adfg</p>
+  </footer>
+
+    <!--Esto hay que ponerlo para no tener que repetir el nav en todos -->
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
+
+</body>
+</html>
