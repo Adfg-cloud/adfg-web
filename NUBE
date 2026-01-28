@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUBE</title>
+  <link rel="stylesheet" href="style.css" /> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <!-- Header con barra de navegación -->
+    <header>
+      <h1>adfg</h1>
+     <!--Aqui iria el nav, pero lo hemos puesto en un script-->
+ <div id="navbar"></div>
+      </header>
+
+      <!-- de aqui para abajo el contenido de la pagina-->
+<main>
+<section id ="Nube">
+  <h2>¿Qué es NUBE?</h2>
+  <p>Hay muchas formas de definir lo que es la nube, y casi cada persona tiene la suya propia, pero mi favorita es la siguiente: "El trastero donde guardas todo lo que no necesitas llevar encima, pero para tus archivos digitales".</p>
+</section>
+
+<section id = "Nube">
+  <h2>¿Porqué nacio NUBE?</h2>
+  <p> Si la nube es tan maravillosa que me permite guardar mis cosas "online", tiene que tener alguna pega, ¿no?
+Pues sí, por lo general google ofrece gratis 15GB para que metas ahí todas tus cosas, y saben perfectamente que esa capacidad no es suficiente. Vas a verte obligado a contratar una tarifa para tener más espacio, a fin de cuentas a ellos tambien les cuesta dinero almacenar tus datos
+no lo hacen por caridad, o ¿si?... ¿Porque te darían 15GB gratis sabiendo que muchas personas van a crear varias cuentas para guardar sus cosas en lotes de 15GB?  Quizas porque..."Si algo es gratis es porque tu eres el producto".
+
+Te has parado alguna vez a leer los terminos y condiciones de google cada vez que inicias sesion en una pagina web, en una app, o donde sea? Es una cesion de tus datos, de esa forma google rentabiliza los datos incluso de los clientes que no tienen contratada ninguna tarifa.
+
+He hablado de google, Apple, Amazon o el proveedor de servisios que se te ocurra usan esta estrategia. ¿Pero tú quieres que tus datos privados estén en manos de estas empresas? o por el contrario ¿prefieres ser tu quien los maneje?
+</p>
+
+</section>
+
+<section id="Feme"> 
+  <h2>¿Como construí a NUBE?</h2>
+  <p>Ya tenemos la idea, buscar la forma de almacenar nosotros mismos nuestros propios datos ¿Como lo hacemos? Llevar un disco duro por la calle no es para nada práctico, ni seguro</p>
+  
+  <p>La capacidad extra que nos aporta un disco duro, la vamos a necesitar, en algun sitio hay que meter los datos, pero ahora se plantean distintas posibilidades, menos mal que este año en la universidad cursamos una asignatura enfocada en soluciones cloud y podemos orientarnos al respecto</p>
+
+
+  <p>Las opciones que se nos plantean son las siguientes:
+
+   <ul tipe= "-">
+  
+     <li> Comprar un rack y empezar a construir un servidor industrial.(Extremadamente caro)</li>
+     <li> Comprar un NASH para introducirle discos duros. (Muy caro) </li>
+     <li> Usar mi ordenador de NASH y un disco duro (Parece razonable) </li>
+     <li> Llevar un disco duro por la vida como un complemento más (Muy inseguro, más si vamos a llevar datos privados)</li>
+   </ul>
+    
+Teniendo claras las opciones paso a explicar como funciona la solución que elegi y cuales son sus limitaciones, porque sí, no es perfecta, pero para uso personal es más que suficiente.
+  </p>
+  
+  <p>
+Para empezar con las pruebas, yo use un USB para ver si el desarrollo completo era factible, y ya en función de los resultados del proyecto escalarlo para tener más capacidad.
+Busque la forma más sencilla de hacerlo, y encontre una aplicacion llamada <a href="https://www.resilio.com/sync/" target="_blank">Resilio Sync </a>, que permite sincronizar una carpeta de un ordenador para acceder a ella a traves de otros dispositivos, y en cierta forma esto es lo que hace la nube.
+Lo bueno de esta aplicación es que tan solo crea el tunel seguro entre los dispositivos, pero toda la gestión de los datos queda de parte del usuario, justo el grado de privacidad que andamos buscando.
+ </p>
+  
+</section>
+  
+  </main>
+  <footer>
+    <p>&copy; 2025 adfg</p>
+  </footer>
+
+    <!--Esto hay que ponerlo para no tener que repetir el nav en todos -->
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
+
+</body>
+</html>
