@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>adfg - PEMnelope</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>adfg</h1>
+ <!--Aqui iria el nav, pero lo hemos puesto en un script-->
+ <div id="navbar"></div>
+ 
+  </header>
+  <main>
+    <section id="PEMnelope">
+      <h2>¿Qué es PEMnelope?</h2>
+      <p>Como el propio nombre indica PEMnelope, parte de la idea de un Pulso Electro-Magnefico. Para los que no saben de lo que se trata, es una herramienta que genera pulsos que alteran el campo Electro-Magnetico cercano, y puede "romper" muchos aparatos que funcionen con electricidad si no estan adecuadamente protegidos</p>
+    </section>
+    
+    <section id="PEMnelope">
+      <h2>¿Como construí a PEMnelope?</h2>
+      <p>Vale, empecemos por el principio, no la he construido, todavia, por temas de presupuesto con algunos elementos. Empecé con el diseño varios modelos para ir viendo cuál era más eficiente, pero tenemos que ver la eficiencia desde varios puntos de vista para optimizar al máximo todos los elementos. Para ello tenemos que ver cuales son estos elementos.</p>
+        <ul tipe ="-">
+        <li>Una fuente de energia: En este caso usaremos baterias de Litio que hemos usado en otros experimentos. La distribución de las baterias será delimitada por el resto del diseño, si necesitamos más o menos corriente o voltaje</li>
+        <li>Bobina: Este es el elemnto clave. Servirá para convertir la corriente en magnetismo usando la ley de Faraday. Pero con la bobina tenemos que saber cuantas vueltas poner, y cual debe ser el diametro de la misma. En mi caso una bobina de 7 vueltas, y unos 8 cm de diametro. Tener pocas vuelta en la bobina hace que la corriente circule más rápido, y por tanto genere un mejor pulso</li>
+        <li>Condensadores: Son un elemento que nos permitirá almecenar energia y liberarla muy rápido, ideal para que la bobina tenga mucha corriente en muy poco tiempo. Pero los condensadores tienen limitaciones, en capacidad y tensión.</li>
+        <li>Generador de alta tensión: Como vimos con Elektra, exactamente el mismo elemento. Lo podriamos usar para provocar una diferencia de tensión elevada que afectando a la bobina pueda provocar el pulso EM, pero para poder usarlo los condensadores deben ser capaces de soportarlo, por tanto no es un elemento que resulte ideal</li>
+        <li>Otro tipo de elevador de tensión (ZVS): Los generadores de alta tensión vistos en el punto anterior igual son excesivos para unos condensadoreres normales, y hacer un banco de condensadores con combinaciones serie-paralelo puede acabar en tragedia. por tanto si rebajamos la tensión podriamos tener algo más seguro.</li>
+        <li>Un Disparador de Spark: Una vez cargados los condensadores, esa energia hay que liberarla de golpe, inicialmente pense en un disparador de Spark, es decir poner una pieza movil que se acercase y probocase un salto de la chispa entre los condensadores y la bobina. Pero poner una chispa de mucho voltaje y mucha corriente, es excesivamente peligroso llegando incluso a poder ser mortal, por tanto esta idea quedo rapidamente descartada, aunque hay que decir que de haberla usado, el dispositivo final tendría el mismo mecanismo de disparo que un fusil de chispa del siglo XVIII</li>
+        <li>Un interruptor más avanzado que el Disparador de Spark: Encontre el SCR 300A 1600V, que soporta con creeces el voltaje que vamos a suministrar y nos permite darle una gran cantidad de corriente a la bobina.</li>
+        <li>Un interruptor ON/OFF: El típico interruptor de toda la vida, para asegurarnos de conectar las baterias al resto del montaje. ON, empieza a cargar los condensadores y cuando estan listos el SCR libera la energia. OFF, las baterias están desconectadas del sistema, no hay fuente no hay PEM.</li>
+</ul>
+    </section>
+    
+    <section id="PEMnelope">
+      <h2>¿Porque no lo he contruido todavia?</h2>
+      <p>El principal problema que tiene, es el precio. Los condensadores necesarios para las carecteristicas de este proyecto no son los tipicos que puedas comprar en cualquier tienda, son grandes, pesados y especialmente caros, condensadores de alta tensión y capacidad.
+Ademas el diseño se ha visto sometido a constantes mejoras, en las que algunas de las partes han sido cambaidas por otras o se han visto optimizadas para un mejor desempeño.
+<h3>La fase de diseño</h3>
+El diseño iba a ser mucho mas simple, bas baterias cargando un banco de condensadores en paralelo y la bobina al final, pero esto apenas generaba nada en la bobina.
+Añadimos a la idea el generador de alta tensión para cargar mas rapido los condensadores, pero ahora el problema eran los condensadores, conectados así, seguramente explotarían... Esto no me servia, por tanto teniamos que subir el nivel con unos condensadores de mayor capacidad tensión.
+Con los nuevos condensadores seguia sin ser suficiente, teniamos que lograr que los ocndensadores soltaran toda la energia de golpe, porque hasta ahora no lo hacian. Pero podiamos usar el aire como interruptor, ya que la tensión de ruptura es de 3.000V/mm y con unos tornillos separados lo suficiente podriamos regular la tensión. Solo hacia falta poner uno a la salida del banco de condensadores y el otro a la entrada de la bobina. Esto funcionaría, pero ¿es eficiente?
+La respuesta claramente es no. Un banco de condensadores preparado para el generador de alta tensión es peligroso porque los condensadores no lo aguantarían, entonces teniamos uqe quitar ese elemento, pero seguiamos necesitando algo que elevase la tensión, qui entra el ZVS, elevando la tensión hasta unos 400V, lo cual permitiria buscar unos condensadores más sencillos sin la necesidad de hacer unas combinaciones en serie paralelo que probablemente acabarían mal.
+Y para rematar, el modulo SCR, mejora el rendimiento del salto entre los tornillos, ya que como pretendíamos usar el aire para esto introduciamos muchas perdidas electricas, y esto disminuye mucho la eficiencia del proyecto. Para evitarlo era necesario algo similar a un interruptor que cuando los condensadores estuvieran cargados generase un disparo rapido que liberase toda la energia en la bobina.
+      </p>
+    </section>
+
+    <section id="PEMnelope">
+      <h2>Imagenes del esquema</h2>
+      <p>Os voy a dejar unas imagenes del esquema del proyecto en sí para que os podais hacer una idea de como estáa pensado</p>
+      <p>Empezando por la fuente de alimentadción, esta sería la distribución que yo he elegido para suministar una tension de entrada de hasta 12V.</p>
+      <img>imagenes/fuente a 12 v con interruptor.png</img>
+      <p>Esto iría conectado al modulo elevador de tensión ZVS, daando como resultado el siguiente esquema:</p>
+      <img>imagenes/Simplificacion fuente+elevador de tension.png</img>
+      <p>Hasta aquí la aliementación del circuito, ahora habria que colocar los condensadores, en este caso los elegí preparados para trabajar a alta tensión, y por tanto no es necesaria ninguna configuracion extraña</p>
+      <img>imagenes/banco de condensadores.png</img>
+      <p>los extremos de la izquierda van al positivo y negativo de la fuente de alimentación vista en la imagen anterior y los extremos de la derecha van, uno al disparador SCR y el otro a la bobina</p>
+      <img>aprosimacion del SCR.png</img>
+      <p>Para terminar conectariamos la salida del SCR al extremo restaante de la bobina para cerrar el circuito</p>
+    </section>
+
+    <section id="PEMnelope">
+      <h2>Una vez terminado el proyecto</h2>
+      <p>El principal problema es el precio de los condensadores, pero una vez este solucionado este punto, lo siguiente será montarlo, y por supuesto probarlo. Para ello se recomienda hacerlo en un sitio en el que no haya ningun elemento que pueda verse afectado, y se dispare un pulso hacia algo que no tenga mucho valor, como una calculadora del chino o similar.
+Este tipo de imventos pueden afectar a electrodomesticos, infraestructura, o incluso a equipo medico como marcapasos, asi que es importante tener especial cuidado cuando se realizan las pruebas.
+</p>
+    </section>
+    
+    
+  </main>
+  <footer>
+    <p>&copy; 2025 adfg</p>
+  </footer>
+
+    <!--Esto hay que ponerlo para no tener que repetir el nav en todos -->
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
+
+</body>
+</html>
