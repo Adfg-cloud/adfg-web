@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>adfg - Skylandex</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>adfg</h1>
+ <!--Aqui iria el nav, pero lo hemos puesto en un script-->
+ <div id="navbar"></div>
+ 
+  </header>
+  <main>
+    <section id="Skylandex">
+      <h2>¿Qué es la Skylandex?</h2>
+      <p>Es una aplicación web que combina el universo de Skylanders con laa utilidad de la Pokedex, que a dia de creción de esta estrada se encuentra en fase beta.</p>
+    </section>
+    
+    <section id="Skylandex">
+      <h2>¿Como construí la Skylandex?</h2>
+      <p>Por ahora se encuentra en fase beta, pero lo que se puede ver ya es prometedor. Una aplicacion dedicada que permite al usuario gestinar su colección. Me habían hablado del potencial del Claude para el desarrollo en general, aprovechando que tenia este proyecto parado decidí probarlo.</p>
+      <p>Empecé diseñando el prompt lo mejor posible para hacerle ver lo que buscaba desarrollar, comentandole el problema que había tenido para encontrar una base de datos cofiable para empezar el desarollo, y en cuanto la tuvimos dimos el paso al diseño.
+        Había que construir las distintas categorias para poder filtrar por personajes, por juego, categoria... Por supuesto tambien habia que  tener un filtro parasaber si ese personaje ya estaba incluido en la colección o no y otro para marcar los personajes que nos gustaria adquirir.
+        Para rematar tambien se me ocurrio añadir imagenes a los personajes porque muchas veces el ID (Nombre) no recuerda cual es el personaje y menos con los mas de 1000... Este trabajo es más pesado y repetitivo, de ahí que se lo encagase a la IA, pero aparecio un nuevo problema, los dichosos tokens...
+        los gratis no eran suficientes para hacer el trabajo y comprar más era un gasto muy elevado para este proyecto, por lo que habia que buscar la forma de dividir el trabajo en distintas tandas para que la IA hiciera el trabajo duro y yo hacía la parte de diseño.
+      </p>
+        
+    </section>
+    
+    <section id="Skylandex">
+      <h2>¿Porque esta en beta todavía?</h2>
+      <p>Ahora mismo esta en beta porque seguimos implementando mejoras de diseño, imagenes de los personajes, y para variar cuando se revisa en inventario, siempre aparecen nuevos productos que no sabias que existen, como en este caso, nuevas figuras que no sabes que existen.
+        <h3>El estado actual</h3>
+          <p>Actualmente la web no ha sido lanzada al publico, pues quiero tener acabado al menos el tema de las imagenes antes de que esto ocurra, de forma que al subirla a mi repositorio los cambios que agrege sean menores y no algo tan visual como las entradas de los propios personejes</p>
+      </p>
+      <h3>Trabajo a futuro</h3>
+        <p>Soy bastante ambicioso con el futuro de esta aplicación. me gustaría convertirla en una aplicacion para dispositivos moviles e integrar alguna herramienta de reconocimiento de figura por imagen, como en las Pokedex. 
+          Aunque también soy realista, entiendo que la Skylandex es una herramienta para un nicho, y por tanto no tiene demasiadas salidas fuera de su propio nicho, pero me gustaría que los conocimientso uqe obtenga desarrollando esta app
+          me ayudasen a crear una nueva aplicación de gestión de colecciones especifica para cada nicho, ya sean coleccionistas de cartas, comics, sellos, monedas u otros tipos de juguetes o videojuegos...
+        </p>
+    </section>
+
+    <section id="Skylandex">
+      <h2>Enlace a la ultima version (28/09/2026)</h2>
+      <p>Este es el estado de la aplicacion web a dia de hoy
+
+
+      </p>
+    </section>
+
+
+
+    <section id="Skylandex">
+      <h2>Una vez terminado el proyecto</h2>
+      <p>Con algo de suerte este proyecto no lo terminaré pronto y podré dedicar algo de tiempo a hacer una aplicación con mucho cariño. Pero cuando acabe la version web me gustaria sacar la version para Android y que cada persona que quiera pueda llevar una Skylandex consigo en el movil.</p>
+    </section>
+    
+    
+  </main>
+  <footer>
+    <p>&copy; 2025 adfg</p>
+  </footer>
+
+    <!--Esto hay que ponerlo para no tener que repetir el nav en todos -->
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
+
+</body>
+</html>
